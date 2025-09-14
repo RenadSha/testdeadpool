@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deadpool Head in HTML & CSS</title>
+  
+  <meta name="author" content="Renad Shabshoul">
+  <meta name="description" content="A Deadpool head made with HTML and CSS. Hover to reveal the swords!">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Deadpool Head in HTML & CSS">
+  <meta name="twitter:description" content="A Marvel Deadpool head, built with pure HTML and CSS. Hover to reveal the swords!">
+  <meta name="twitter:image" content="https://zm005-2025b1.github.io/sharing-like-a-pro-Renad10/deadpool.png">
+
+  
+  <style>
+    .wrap {
+      width: 400px;   
+      height: 300px;
+      margin: 50px auto;
+      position: relative;
+    }
+
+    .face {
+      width: 200px;
+      height: 200px;
+      background: red;
+      border-radius: 50%;
+      position: absolute;
+      top: 50px; left: 50%;
+      transform: translateX(-50%);
+      border: 5px solid black;
+      z-index: 2;
+    }
+
+    .eye-spot {
+      width: 60px;
+      height: 90px;
+      background: black;
+      border-radius: 50%;
+      position: absolute;
+      top: 50px;
+    }
+    .eye-spot.left  { left: 30px; }
+    .eye-spot.right { right: 30px; }
+
+    .eye {
+      width: 25px;
+      height: 40px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 25px;
+      left: 18px;
+    }
+
+    .sword {
+      position: absolute;
+      width: 20px;
+      height: 220px;
+      opacity: 0;
+      transition: opacity .4s ease;
+      z-index: 3; 
+    }
+
+    .sword.left {
+      left: -30px;
+      top: 40px;
+      transform: rotate(-20deg);
+    }
+
+    .sword.right {
+      right: -30px;
+      top: 40px;
+      transform: rotate(20deg);
+    }
+
+
+    .blade {
+      width: 6px;
+      height: 160px;
+      background: silver;
+      border: 1px solid #444;
+      margin: 0 auto;
+      border-radius: 3px;
+    }
+
+
+    .guard {
+      width: 30px;
+      height: 6px;
+      background: #333;
+      margin: 0 auto;
+      margin-top: 2px;
+      border-radius: 3px;
+    }
+
+
+    .handle {
+      width: 10px;
+      height: 40px;
+      background: #111;
+      border: 1px solid #000;
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+
+
+    .wrap:hover .sword {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <div class="face">
+      <div class="eye-spot left"><div class="eye"></div></div>
+      <div class="eye-spot right"><div class="eye"></div></div>
+    </div>
+
+
+    <div class="sword left">
+      <div class="blade"></div>
+      <div class="guard"></div>
+      <div class="handle"></div>
+    </div>
+    <div class="sword right">
+      <div class="blade"></div>
+      <div class="guard"></div>
+      <div class="handle"></div>
+    </div>
+  </div>
+</body>
+</html>
